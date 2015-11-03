@@ -1,0 +1,14 @@
+PODS:
+  - RDActionKit (0.1.0)
+
+DEPENDENCIES:
+  - RDActionKit (from `../`)
+
+EXTERNAL SOURCES:
+  RDActionKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  RDActionKit: 6ae283445207bd6e6bcccded4865483ca9147ac4
+
+COCOAPODS: 0.39.0

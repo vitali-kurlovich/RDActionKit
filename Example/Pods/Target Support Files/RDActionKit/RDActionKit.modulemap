@@ -1,0 +1,6 @@
+framework module RDActionKit {
+  umbrella header "RDActionKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
