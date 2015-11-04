@@ -25,6 +25,48 @@
     return [self _rdBarButtonItemBlockContext].onActionBlock;
 }
 
+
+- (instancetype)initWithImage:(nullable UIImage *)image style:(UIBarButtonItemStyle)style actionBlock:(void (^)(UIBarButtonItem *))actionBlock
+{
+    self = [self initWithImage:image style:style target:nil action:nil];
+    if (self)
+    {
+        [self setOnActionBlock:actionBlock];
+    }
+    return self;
+}
+
+- (instancetype)initWithImage:(nullable UIImage *)image landscapeImagePhone:(nullable UIImage *)landscapeImagePhone style:(UIBarButtonItemStyle)style actionBlock:(void (^)(UIBarButtonItem *))actionBlock
+{
+    self = [self initWithImage:image landscapeImagePhone:landscapeImagePhone style:style target:nil action:nil];
+    if (self)
+    {
+        [self setOnActionBlock:actionBlock];
+    }
+    return self;
+}
+
+- (instancetype)initWithTitle:(nullable NSString *)title style:(UIBarButtonItemStyle)style actionBlock:(void (^)(UIBarButtonItem *))actionBlock
+{
+    self = [self initWithTitle:title style:style target:nil action:nil];
+    if (self)
+    {
+        [self setOnActionBlock:actionBlock];
+    }
+    return self;
+}
+
+- (instancetype)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem actionBlock:(void (^)(UIBarButtonItem *))actionBlock
+{
+    self = [self initWithBarButtonSystemItem:systemItem target:nil action:nil];
+    if (self)
+    {
+        [self setOnActionBlock:actionBlock];
+    }
+    return self;
+}
+
+
 - (_RDBarButtonItemBlockContext *)_rdBarButtonItemBlockContext
 {
     _RDBarButtonItemBlockContext *controlBlock = objc_getAssociatedObject(self, @selector(_rdBarButtonItemBlockContext));
