@@ -30,6 +30,12 @@
         NSLog(@"OnAction 2");
     }] text:@"Action 2"];
     
+    
+    [self.segmentedControl setOnValueChanged:^(UISegmentedControl *  control) {
+        NSLog(@"SelectedSegmentIndex: %@", @(control.selectedSegmentIndex));
+    }];
+    
+
     [self.button setRDActionItem:actionItem];
     
     [self.segmentedControl setRDActionItem:actionItem forSegmentAtIndex:0];

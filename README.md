@@ -3,13 +3,17 @@
 [![License](https://img.shields.io/cocoapods/l/RDActionKit.svg?style=flat)](http://cocoapods.org/pods/RDActionKit)
 [![Platform](https://img.shields.io/cocoapods/p/RDActionKit.svg?style=flat)](http://cocoapods.org/pods/RDActionKit)
 
-
-RDActionKit
 =================
 Collection of categories on UIControl, UIButton, UITextField etc. to use inline block callbacks and wrapped into the object callbacks.
 
 RDBlocks
 =================
+Example
+```objc
+[self.segmentedControl setOnValueChanged:^(UISegmentedControl *  control) {
+    NSLog(@"SelectedSegmentIndex: %@", @(control.selectedSegmentIndex));
+}];
+```
 UIControl+RDBlock.h
 ================
 ```objc
