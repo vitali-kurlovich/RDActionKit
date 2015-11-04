@@ -44,23 +44,18 @@
     __weak typeof(self) weakSelf = self;
     
     
-    
-    UIBarButtonItem* barItems = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:nil action:nil];
-    
-    self.navigationItem.rightBarButtonItem =  barItems;
-    
-    
-    [barItems setOnActionBlock:^(UIBarButtonItem *barButtonItem) {
+   UIBarButtonItem* barItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction actionBlock:^(UIBarButtonItem *barButtonItem) {
         
         UIAlertController* controller = [UIAlertController alertControllerWithTitle:@"Alert" message:@"Message" preferredStyle:UIAlertControllerStyleActionSheet];
         
         [controller addAction:[UIAlertAction actionWithRDActionItem:actionItem style:UIAlertActionStyleDefault]];
-        
         [controller addAction:[UIAlertAction actionWithRDActionItem:actionItem2 style:UIAlertActionStyleDefault]];
         
         [weakSelf presentViewController:controller animated:YES completion:nil];
         
     }];
+
+    self.navigationItem.rightBarButtonItem =  barItem;
 }
 
 - (void)viewDidAppear:(BOOL)animated
