@@ -10,14 +10,14 @@
 
 @interface UITextField (RDBlock)
 
-@property (nonatomic, readonly) void (^onEditingDidBegin)(UITextField* control);
-@property (nonatomic, readonly) void (^onEditingChanged)(UITextField* control);
-@property (nonatomic, readonly) void (^onEditingDidEnd)(UITextField* control);
-@property (nonatomic, readonly) void (^onEditingDidEndOnExit)(UITextField* control);
+@property (nonatomic, nullable, readonly) void (^onEditingDidBegin)(UITextField* _Nonnull control);
+@property (nonatomic, nullable, readonly) void (^onEditingChanged)(UITextField* _Nonnull control);
+@property (nonatomic, nullable, readonly) void (^onEditingDidEnd)(UITextField* _Nonnull control);
+@property (nonatomic, nullable, readonly) void (^onEditingDidEndOnExit)(UITextField* _Nonnull control);
 
-- (void)setOnEditingDidBegin:(void (^)(UITextField *textField))onEditingDidBegin;
-- (void)setOnEditingChanged:(void (^)(UITextField *textField))onEditingChanged;
-- (void)setOnEditingDidEnd:(void (^)(UITextField *textField))onEditingDidEnd;
-- (void)setOnEditingDidEndOnExit:(void (^)(UITextField *textField))onEditingDidEndOnExit;
+- (void)setOnEditingDidBegin:(void (^__nullable)(UITextField* _Nonnull textField))onEditingDidBegin;
+- (void)setOnEditingChanged:(void (^__nullable)(UITextField* _Nonnull textField))onEditingChanged;
+- (void)setOnEditingDidEnd:(void (^__nullable)(UITextField* _Nonnull textField))onEditingDidEnd;
+- (void)setOnEditingDidEndOnExit:(void (^__nullable)(UITextField* _Nonnull textField))onEditingDidEndOnExit;
 
 @end

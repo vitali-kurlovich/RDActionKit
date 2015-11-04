@@ -10,8 +10,8 @@
 
 @interface UISwitch (RDBlock)
 
-@property (nonatomic, readonly) void (^onValueChanged)(UISwitch* control);
+@property (nonatomic, nullable, readonly) void (^onValueChanged)(UISwitch* _Nonnull control);
 
-- (void)setOnValueChanged:(void (^)(UISwitch *control))onValueChanged;
+- (void)setOnValueChanged:(void (^__nullable)(UISwitch* _Nonnull control))onValueChanged;
 
 @end

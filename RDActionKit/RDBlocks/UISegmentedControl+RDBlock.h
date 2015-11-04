@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UISegmentedControl (RDBlock)
-@property (nonatomic, readonly) void (^onValueChanged)(UISegmentedControl* control);
+@property (nonatomic,nullable, readonly) void (^onValueChanged)(UISegmentedControl* _Nonnull control);
 
-- (void)setOnValueChanged:(void (^)(UISegmentedControl *control))onValueChanged;
+- (void)setOnValueChanged:(void (^__nullable)(UISegmentedControl* _Nonnull control))onValueChanged;
 @end

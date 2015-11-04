@@ -10,8 +10,8 @@
 
 @interface UISlider (RDBlock)
 
-@property (nonatomic, readonly) void (^onValueChanged)(UISlider* control);
+@property (nonatomic, nullable, readonly) void (^onValueChanged)(UISlider* _Nonnull control);
 
-- (void)setOnValueChanged:(void (^)(UISlider *control))onValueChanged;
+- (void)setOnValueChanged:(void (^__nullable)(UISlider* _Nonnull control))onValueChanged;
 
 @end

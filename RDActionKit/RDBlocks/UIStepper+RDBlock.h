@@ -10,8 +10,8 @@
 
 @interface UIStepper (RDBlock)
 
-@property (nonatomic, readonly) void (^onValueChanged)(UIStepper* control);
+@property (nonatomic, nullable, readonly) void (^onValueChanged)(UIStepper* _Nonnull control);
 
-- (void)setOnValueChanged:(void (^)(UIStepper *control))onValueChanged;
+- (void)setOnValueChanged:(void (^__nullable)(UIStepper* _Nonnull control))onValueChanged;
 
 @end

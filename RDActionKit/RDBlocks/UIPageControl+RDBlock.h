@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UIPageControl (RDBlock)
-@property (nonatomic, readonly) void (^onValueChanged)(UIPageControl* control);
+@property (nonatomic, nullable, readonly) void (^onValueChanged)(UIPageControl* _Nonnull control);
 
-- (void)setOnValueChanged:(void (^)(UIPageControl *control))onValueChanged;
+- (void)setOnValueChanged:(void (^__nullable)(UIPageControl* _Nonnull control))onValueChanged;
 
 @end
