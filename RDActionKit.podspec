@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RDActionKit"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Action and blocks for UIControls"
 
   s.description      = <<-DESC
@@ -25,5 +25,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'RDActionKit/**/*'
+  s.frameworks = 'Foundation', 'UIKit'
 
 end
