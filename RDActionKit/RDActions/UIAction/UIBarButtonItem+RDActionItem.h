@@ -11,6 +11,6 @@
 @class RDActionItem;
 
 @interface UIBarButtonItem (RDActionItem)
-- (instancetype)initWithActionItem:(RDActionItem*)actionItem style:(UIBarButtonItemStyle)style;
+- (nonnull instancetype)initWithActionItem:(nullable RDActionItem*)actionItem style:(UIBarButtonItemStyle)style;
 
 @end

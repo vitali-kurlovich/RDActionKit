@@ -11,5 +11,5 @@
 @class RDActionItem;
 
 @interface UIButton (RDActionItem)
-- (void)setRDActionItem:(RDActionItem*)actionItem;
+- (void)setRDActionItem:(nullable RDActionItem*)actionItem;
 @end

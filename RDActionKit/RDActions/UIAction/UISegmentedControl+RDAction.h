@@ -13,8 +13,9 @@
 
 @interface UISegmentedControl (RDAction)
 
+- (nullable id<RDActionProtocol>)rDActionForSegmentAtIndex:(NSUInteger)segment;
 
 - (void)setRDAction:(nullable id<RDActionProtocol>)action forSegmentAtIndex:(NSUInteger)segment;
-- (nullable id<RDActionProtocol>)rDActionForSegmentAtIndex:(NSUInteger)segment;
+
 
 @end

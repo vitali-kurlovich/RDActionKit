@@ -11,5 +11,5 @@
 @class RDActionItem;
 
 @interface UIAlertAction (RDActionItem)
-+ (instancetype)actionWithRDActionItem:(RDActionItem*)actionItem style:(UIAlertActionStyle)style;
++ (nonnull instancetype)actionWithRDActionItem:(nullable RDActionItem*)actionItem style:(UIAlertActionStyle)style;
 @end

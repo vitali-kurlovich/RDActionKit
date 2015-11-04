@@ -12,7 +12,7 @@
 
 @interface UIButton (RDAction)
 
-@property (nonatomic, readonly) id<RDActionProtocol> rDAction;
-- (void)setRDAction:(id<RDActionProtocol>)action;
+@property (nonatomic, nullable, readonly) id<RDActionProtocol> rDAction;
+- (void)setRDAction:(nullable id<RDActionProtocol>)action;
 
 @end

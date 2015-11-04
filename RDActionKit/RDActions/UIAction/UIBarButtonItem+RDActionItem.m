@@ -24,12 +24,9 @@
     } else {
         self = [self initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
     }
-    
-   // dispatch_async(dispatch_get_main_queue(), ^{
-        [self setRDAction:actionItem];
-    //});
-    
-    
+
+    [self setRDAction:actionItem];
+
     return self;
 }
 
