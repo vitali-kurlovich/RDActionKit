@@ -6,7 +6,7 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UISegmentedControl (RDBlock)
 @property (nonatomic,nullable, readonly) void (^onValueChanged)(UISegmentedControl* _Nonnull control);

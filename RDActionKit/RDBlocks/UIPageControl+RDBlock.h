@@ -6,7 +6,7 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIPageControl (RDBlock)
 @property (nonatomic, nullable, readonly) void (^onValueChanged)(UIPageControl* _Nonnull control);
