@@ -22,9 +22,9 @@ DerivedData
 # Bundler
 .bundle
 
-Example/Pod
-Pod.lock
 Example/*.xcworkspace
+Example/Podfile.lock
+Example/Pods
 
 Carthage
 # We recommend against adding the Pods directory to your .gitignore. However
