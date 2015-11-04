@@ -118,7 +118,7 @@ UISegmentedControl+RDActionItem.h
 =======================
 ```objc
 - (void)setRDAction:(id<RDActionProtocol>)action forSegmentAtIndex:(NSUInteger)segment;
-- (void)setRDActionItem:(nullable RDActionItem*)actionItem forSegmentAtIndex:(NSUInteger)segment;
+- (void)setRDActionItem:(RDActionItem*)actionItem forSegmentAtIndex:(NSUInteger)segment;
 ```
 
 UIAlertAction+RDAction.h
