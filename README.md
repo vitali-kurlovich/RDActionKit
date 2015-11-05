@@ -32,10 +32,10 @@ UIControl+RDBlock.h
 UITextField+RDBlock.h
 ================
 ```objc
-- (void)setOnEditingDidBegin:(void (^)(UITextField*  textField))onEditingDidBegin;
-- (void)setOnEditingChanged:(void (^)(UITextField*  textField))onEditingChanged;
-- (void)setOnEditingDidEnd:(void (^)(UITextField*  textField))onEditingDidEnd;
-- (void)setOnEditingDidEndOnExit:(void (^)(UITextField*  textField))onEditingDidEndOnExit;
+- (void)setOnEditingDidBegin:(void (^)(UITextField* textField))onEditingDidBegin;
+- (void)setOnEditingChanged:(void (^)(UITextField* textField))onEditingChanged;
+- (void)setOnEditingDidEnd:(void (^)(UITextField* textField))onEditingDidEnd;
+- (void)setOnEditingDidEndOnExit:(void (^)(UITextField* textField))onEditingDidEndOnExit;
 ```
 
 UISegmentedControl+RDBlock.h, (UISlider, UIStepper, UISwitch)
@@ -49,8 +49,8 @@ UIBarButtonItem+RDBlock.h
 ```objc
 - (instancetype)initWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style actionBlock:(void (^)(UIBarButtonItem* barButtonItem))actionBlock;
 - (instancetype)initWithImage:(nullable UIImage *)image landscapeImagePhone:(UIImage*)landscapeImagePhone style:(UIBarButtonItemStyle)style actionBlock:(void (^)(UIBarButtonItem* barButtonItem))actionBlock;
-- (instancetype)initWithTitle:(nullable NSString *)title style:(UIBarButtonItemStyle)style actionBlock:(void (^__nullable)(UIBarButtonItem * barButtonItem))actionBlock;
-- (instancetype)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem actionBlock:(void (^__nullable)(UIBarButtonItem* barButtonItem))actionBlock;
+- (instancetype)initWithTitle:(nullable NSString *)title style:(UIBarButtonItemStyle)style actionBlock:(void (^)(UIBarButtonItem * barButtonItem))actionBlock;
+- (instancetype)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem actionBlock:(void (^)(UIBarButtonItem* barButtonItem))actionBlock;
 
 - (void)setOnActionBlock:(void (^)( UIBarButtonItem* barButtonItem))onActionBlock;
 ```
@@ -60,7 +60,6 @@ RDActions
 =================
 Example
 ```objc
-
 RDActionItem* actionItem = [[RDActionItem alloc] initWithAction:[RDAction actionWithBlock:^{
         NSLog(@"OnAction");
     }] text:@"Action 1" image:[UIImage imageNamed:@"star"]];
@@ -71,7 +70,6 @@ RDActionItem* actionItem2 = [[RDActionItem alloc] initWithAction:[RDAction actio
 
     [self.segmentedControl setRDActionItem:actionItem forSegmentAtIndex:0];
     [self.segmentedControl setRDActionItem:actionItem2 forSegmentAtIndex:1];
-
 
 UIAlertController* controller = [UIAlertController alertControllerWithTitle:@"Alert" message:@"Message" preferredStyle:UIAlertControllerStyleActionSheet];
 
