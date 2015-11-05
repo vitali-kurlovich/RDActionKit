@@ -48,11 +48,8 @@ UIBarButtonItem+RDBlock.h
 ================
 ```objc
 - (instancetype)initWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style actionBlock:(void (^)(UIBarButtonItem* barButtonItem))actionBlock;
-
 - (instancetype)initWithImage:(nullable UIImage *)image landscapeImagePhone:(UIImage*)landscapeImagePhone style:(UIBarButtonItemStyle)style actionBlock:(void (^)(UIBarButtonItem* barButtonItem))actionBlock;
-
 - (instancetype)initWithTitle:(nullable NSString *)title style:(UIBarButtonItemStyle)style actionBlock:(void (^__nullable)(UIBarButtonItem * barButtonItem))actionBlock;
-
 - (instancetype)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem actionBlock:(void (^__nullable)(UIBarButtonItem* barButtonItem))actionBlock;
 
 - (void)setOnActionBlock:(void (^)( UIBarButtonItem* barButtonItem))onActionBlock;
